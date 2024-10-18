@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">RecargApp</string>
+    <string name="hora_de_operacion">Hora de Operacion</string>
+    <string name="placeholder">placeholder</string>
+    <string name="fecha_de_operacion">Fecha de Operacion</string>
+    <string name="fecha_de_aplicacion">Fecha de Aplicacion</string>
+    <string name="folio">Folio</string>
+    <string name="button_accept">Aceptar</string>
+    <string name="operacion_exitosa">Operacion Exitosa</string>
+    <string name="recarga">Recarga</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

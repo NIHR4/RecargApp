@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#A8D05F" /> <!-- Green color for arc -->
+        </shape>
+    </item>
+
+    <!-- Overlay a rectangle to cut out the top part, forming an arc -->
+    <item android:left="0dp" android:right="0dp" android:bottom="0dp">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</layer-list>
