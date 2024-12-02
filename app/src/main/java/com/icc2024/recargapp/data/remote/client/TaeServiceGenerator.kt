@@ -8,14 +8,20 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-object ServiceGenerator {
+object TaeServiceGenerator {
 
 
     private val builder = Retrofit.Builder()
         .addCallAdapterFactory(RxJavaCallAdapterFactory.createAsync())
-        .baseUrl("http://66.85.157.113:90/")
+        .baseUrl("http://localhost:8080/")
         .addConverterFactory(
-            GsonConverterFactory.create(GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd-'T'HH:mm:ssZZZ").create()) )
+            GsonConverterFactory.create(
+                GsonBuilder()
+                    .serializeNulls()
+                    .setDateFormat("yyyy-MM-dd-'T'HH:mm:ssZZZ")
+                    .create()
+            )
+        )
 
 
     private val logging = run {

@@ -2,56 +2,18 @@ package com.icc2024.recargapp.data.model;
 
 import android.os.Parcel
 import android.os.Parcelable;
+import kotlinx.parcelize.Parcelize
 
-class RechargeResponse(
-    val numtel: String?,
-    val monto: Float?,
-    val fechaHora: String?,
-    val fechaHoraRespuesta: String?,
-    val fechaHoraSolicitud: String?,
-    val codigoRespuesta : String?,
-    val descripcionRespuesta : String?,
-    val respuesta: String?,
-    val noAutorizado: String?) : Parcelable {
+@Parcelize
+class TransactionResponse(
+    val codigo_respuesta : String,
+    val descripcion_respuesta: String,
+    val fecha_hora: String,
+    val fecha_hora_respuesta: String,
+    val fecha_hora_solicitud: String,
+    val monto: String,
+    val no_autorizacion: String,
+    val numtel: String
+) : Parcelable
 
-    constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readFloat(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString()
 
-        ){
-
-        }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(numtel)
-        parcel.writeValue(monto)
-        parcel.writeString(fechaHora)
-        parcel.writeString(fechaHoraRespuesta)
-        parcel.writeString(fechaHoraSolicitud)
-        parcel.writeString(codigoRespuesta)
-        parcel.writeString(descripcionRespuesta)
-        parcel.writeString(respuesta)
-        parcel.writeString(noAutorizado)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<RechargeResponse> {
-        override fun createFromParcel(parcel: Parcel): RechargeResponse {
-            return RechargeResponse(parcel)
-        }
-
-        override fun newArray(size: Int): Array<RechargeResponse?> {
-            return arrayOfNulls(size)
-        }
-    }
-}

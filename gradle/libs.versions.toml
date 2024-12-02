@@ -16,6 +16,7 @@ loggingInterceptor = "5.0.0-alpha.14"
 rxandroid = "1.2.1"
 adapterRxjava2 = "2.11.0"
 adapterRxjava = "2.11.0"
+gson = "2.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,6 +34,7 @@ logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-intercep
 rxandroid = { group = "io.reactivex", name = "rxandroid", version.ref = "rxandroid" }
 adapter-rxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "adapterRxjava2" }
 adapter-rxjava = { group = "com.squareup.retrofit2", name = "adapter-rxjava", version.ref = "adapterRxjava" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
