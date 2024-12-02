@@ -13,7 +13,7 @@ object TaeServiceGenerator {
 
     private val builder = Retrofit.Builder()
         .addCallAdapterFactory(RxJavaCallAdapterFactory.createAsync())
-        .baseUrl("http://localhost:8080/")
+        .baseUrl("http://192.168.100.137:8080/")
         .addConverterFactory(
             GsonConverterFactory.create(
                 GsonBuilder()

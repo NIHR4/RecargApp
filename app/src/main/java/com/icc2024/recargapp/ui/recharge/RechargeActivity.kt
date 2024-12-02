@@ -3,9 +3,10 @@ package com.icc2024.recargapp.ui.recharge
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.icc2024.recargapp.R
-import com.icc2024.recargapp.data.dto.RechargeRequest
+import com.icc2024.recargapp.data.dto.RechargeRequestDto
+import com.icc2024.recargapp.data.model.RechargeResponse
 
-class RechargeActivity : AppCompatActivity(R.layout.activity_recharge), RechargeFragment.Callbacks {
+class RechargeActivity : AppCompatActivity(R.layout.activity_recharge), RechargeFragment.Callbacks, RechargeConfirmationFragment.Callbacks {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,13 +29,31 @@ class RechargeActivity : AppCompatActivity(R.layout.activity_recharge), Recharge
 
     }
 
-    override fun showConfirmationScreen(request: RechargeRequest) {
+    override fun showConfirmationScreen(request: RechargeRequestDto) {
         val fragment = RechargeConfirmationFragment.newInstance(request)
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.fragment_container_view, fragment)
-            .addToBackStack("actions_fragment")
+            .addToBackStack(null)
             .commit()
+    }
+
+    override fun changeToSuccessScreen(response: RechargeResponse) {
+
+
+        while (supportFragmentManager.getBackStackEntryCount() > 0) {
+            supportFragmentManager.popBackStackImmediate();
+        }
+
+        val fragment = TransactionSuccessFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container_view, fragment)
+            .commit()
+    }
+
+    override fun changeToErrorScreen() {
+        TODO("Not yet implemented")
     }
 
 }

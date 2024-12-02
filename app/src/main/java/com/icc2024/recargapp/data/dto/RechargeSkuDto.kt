@@ -1,14 +1,12 @@
 package com.icc2024.recargapp.data.dto
 
-import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
-import java.io.Serializable
 
 
 @Parcelize
-data class RechargeSku (
+data class RechargeSkuDto (
     @SerializedName("Sku:Nombre") val nombre: String,
     @SerializedName("Sku:Sku") val sku: String,
     @SerializedName("Sku:Monto") val monto: String,

@@ -1,11 +1,10 @@
 package com.icc2024.recargapp.data.model;
 
-import android.os.Parcel
 import android.os.Parcelable;
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class TransactionResponse(
+class RechargeResponse(
     val codigo_respuesta : String,
     val descripcion_respuesta: String,
     val fecha_hora: String,

@@ -1,37 +1,28 @@
 package com.icc2024.recargapp.presenter
 
 import android.content.Context
-import android.content.res.Resources
 import android.util.Log
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.icc2024.recargapp.R
 import com.icc2024.recargapp.contract.RechargeContract
-import com.icc2024.recargapp.data.dto.RechargeRequest
-import com.icc2024.recargapp.data.dto.RechargeSku
-import java.io.InputStreamReader
+import com.icc2024.recargapp.data.dto.RechargeRequestDto
+import com.icc2024.recargapp.data.dto.RechargeSkuDto
+import com.icc2024.recargapp.data.manager.SkuDataManager
 
 
 class RechargePresenter (
     private val view: RechargeContract.View,
     private val context: Context) : RechargeContract.Presenter {
 
-    private var skus : List<RechargeSku>? = null
+    private var skus : List<RechargeSkuDto>? = null
     private val companies = listOf("TELCEL", "MOVISTAR", "AT&T", "UNEFON", "VIRGIN", "NEXTER", "ALO")
 
     private var selectedCompanyIdx = 0;
-    private var selectedSku : RechargeSku? = null;
+    private var selectedSku : RechargeSkuDto? = null;
 
-    fun readJsonArray(resources: Resources, resourceId: Int): List<RechargeSku> {
-        val inputStream = resources.openRawResource(resourceId)
-        val reader = InputStreamReader(inputStream)
-        val type = object : TypeToken<List<RechargeSku>>() {}.type
-        return Gson().fromJson(reader, type)
-    }
 
 
     override fun loadInitialData() {
-        skus = readJsonArray(context.resources, R.raw.sku_data)
+        skus = SkuDataManager.instance.getAllSkus(context.resources)
         view.populateCompaniesSpinner(companies)
     }
 
@@ -58,13 +49,13 @@ class RechargePresenter (
         val pass = prefs.getString(context.getString(R.string.pref_password_key), "")
         val store = prefs.getString(context.getString(R.string.pref_tienda_key), "")
         val chain = prefs.getString(context.getString(R.string.pref_cadena_key), "")
-        var request = RechargeRequest(
-            phoneNumber = number,
-            sku = selectedSku!!,
-            user = user!!,
+        var request = RechargeRequestDto(
+            numtel = number,
+            skucode = selectedSku?.sku!!,
+            usuario = user!!,
             password = pass!!,
-            store_id = store!!,
-            chain_id = chain!!
+            tienda = store!!,
+            cadena = chain!!
         )
 
         view.changeFragment(request)

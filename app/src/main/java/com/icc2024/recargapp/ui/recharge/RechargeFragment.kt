@@ -17,14 +17,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.icc2024.recargapp.R
 import com.icc2024.recargapp.contract.RechargeContract
-import com.icc2024.recargapp.data.dto.RechargeRequest
+import com.icc2024.recargapp.data.dto.RechargeRequestDto
 import com.icc2024.recargapp.presenter.RechargePresenter
 
 class RechargeFragment : Fragment(), RechargeContract.View {
     private var presenter : RechargePresenter? = null;
     private var callback : Callbacks? = null;
     interface Callbacks {
-        fun showConfirmationScreen(req: RechargeRequest)
+        fun showConfirmationScreen(req: RechargeRequestDto)
     }
 
     override fun onCreateView(
@@ -142,7 +142,7 @@ class RechargeFragment : Fragment(), RechargeContract.View {
         label?.text = "$${price}.00";
     }
 
-    override fun changeFragment(req: RechargeRequest) {
+    override fun changeFragment(req: RechargeRequestDto) {
         callback?.showConfirmationScreen(req)
     }
 }
