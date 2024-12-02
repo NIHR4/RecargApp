@@ -19,4 +19,180 @@
     <string name="recharge_confirmation">Confirmación de recarga</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name_colored">
+        <font color="#000000">Recarg</font><font color="#673AB7">App</font>
+    </string>
+
+    <string name="app_preference_file">recargapp_preferences</string>
+
+    <!-- PREFERENCES KEYS -->
+    <string name="pref_user_key">app_preferences_user</string>
+    <string name="pref_password_key">app_preferences_password</string>
+    <string name="pref_cadena_key">app_preferences_cadena</string>
+    <string name="pref_tienda_key">app_preferences_tienda</string>
+    <string name="pref_logged_in_key">app_preferences_logged_in</string>
+
+    <!--TAE Skus-->
+    <string-array name="alo_sku_array">
+        <item>ALO 10|0903000000010A</item>
+        <item>ALO 20|0903000000020A</item>
+        <item>ALO 30|0903000000030A</item>
+        <item>ALO 40|0903000000040A</item>
+        <item>ALO 50|0903000000050A</item>
+    </string-array>
+
+    <string-array name="ius_sku_array">
+        <item>IUSACELL 10|004000000010A</item>
+        <item>IUSACELL 20|004000000020A</item>
+        <item>IUSACELL 30|004000000030A</item>
+        <item>IUSACELL 50|040500001</item>
+        <item>IUSACELL 70|004000000070A</item>
+        <item>IUSACELL 100|041000001</item>
+        <item>IUSACELL 150|041500001</item>
+        <item>IUSACELL 200|042000001</item>
+        <item>IUSACELL 300|043000001</item>
+        <item>IUSACELL 500|045000001</item>
+    </string-array>
+    <string-array name="movistar_sku_array">
+        <item>MOVISTAR 10|020100001</item>
+        <item>MOVISTAR 20|020200001</item>
+        <item>MOVISTAR 30|020300001</item>
+        <item>MOVISTAR 50|002000000050A</item>
+        <item>MOVISTAR 60|020600001</item>
+        <item>MOVISTAR 70|002000000070A</item>
+        <item>MOVISTAR 80|002000000080A</item>
+        <item>MOVISTAR 100|021000001</item>
+        <item>MOVISTAR 120|021200001</item>
+        <item>MOVISTAR 150|021500001</item>
+        <item>MOVISTAR 200|022000001</item>
+        <item>MOVISTAR 250|002000000250A</item>
+        <item>MOVISTAR 300|023000001</item>
+        <item>MOVISTAR 500|025000001</item>
+        <item>MOVISTAR RECARGAS 10|00013</item>
+        <item>MOVISTAR RECARGAS 20|00014</item>
+        <item>MOVISTAR RECARGAS 30|00015</item>
+        <item>MOVISTAR RECARGAS 50|00016</item>
+        <item>MOVISTAR RECARGAS 60|00017</item>
+        <item>MOVISTAR RECARGAS 100|00018</item>
+        <item>MOVISTAR RECARGAS 120|00019</item>
+        <item>MOVISTAR RECARGAS 150|00020</item>
+        <item>MOVISTAR RECARGAS 200|00021</item>
+        <item>MOVISTAR RECARGAS 250|00022</item>
+        <item>MOVISTAR RECARGAS 300|00023</item>
+        <item>MOVISTAR RECARGAS 500|00024</item>
+        <item>MOVISTAR RECARGAS 400|00028</item>
+        <item>MOVISTAR RECARGAS 40|00083</item>
+        <item>MOVISTAR RECARGAS 70|00084</item>
+        <item>MOVISTAR RECARGAS 80|00085</item>
+        <item>MOVISTAR RECARGAS 140|00155</item>
+    </string-array>
+    <string-array name="nextel_sku_array">
+        <item>NEXTEL 20|006000000020A</item>
+        <item>NEXTEL 30|060300001</item>
+        <item>NEXTEL 50|060500001</item>
+        <item>NEXTEL 100|061000001</item>
+        <item>NEXTEL 200|062000001</item>
+        <item>NEXTEL 300|006000000300A</item>
+        <item>NEXTEL 500|065000001</item>
+        <item>TELCEL 10|001000000010B</item>
+        <item>TELCEL 20|010200001</item>
+        <item>TELCEL 30|010300001</item>
+        <item>TELCEL 50|010500001</item>
+        <item>TELCEL 100|011000001</item>
+        <item>TELCEL 150|011500001</item>
+        <item>TELCEL 200|012000001</item>
+        <item>TELCEL 300|013000001</item>
+        <item>TELCEL 500|015000001</item>
+        <item>UNEFON 10|005000000010A</item>
+        <item>UNEFON 20|005000000020A</item>
+        <item>UNEFON 30|005000000030A</item>
+        <item>UNEFON 50|005000000050A</item>
+        <item>UNEFON 70|005000000070A</item>
+        <item>UNEFON 100|005000000100A</item>
+        <item>UNEFON 150|005000000150A</item>
+        <item>UNEFON 200|005000000200A</item>
+        <item>UNEFON 300|005000000300A</item>
+        <item>UNEFON 500|005000000500A</item>
+        <item>VIRGIN 20|030000000020A</item>
+        <item>VIRGIN 30|030000000030A</item>
+        <item>VIRGIN 40|030000000040A</item>
+        <item>VIRGIN 50|030000000050A</item>
+        <item>VIRGIN 100|030000000100A</item>
+        <item>VIRGIN 150|030000000150A</item>
+        <item>VIRGIN 200|030000000200A</item>
+        <item>VIRGIN 300|030000000300A</item>
+        <item>VIRGIN 500|030000000500A</item>
+    </string-array>
+    <string-array name="atnt_sku_array">
+        <item>AT&amp;T 50|00069</item>
+        <item>AT&amp;T 100|00070</item>
+        <item>AT&amp;T 150|00071</item>
+        <item>AT&amp;T 200|00072</item>
+        <item>AT&amp;T 300|00073</item>
+        <item>AT&amp;T 500|00074</item>
+        <item>AT&amp;T 30|00095</item>
+        <item>AT&amp;T 20|00096</item>
+        <item>AT&amp;T 10|00110</item>
+        <item>AT&amp;T 70|00111</item>
+        <item>AT&amp;T 120|00126</item>
+        <item>AT&amp;T 15|00164</item>
+    </string-array>
+    <string-array name="telcel_sku_array">
+        <item>TELCEL AMIGO SIN LIMITE 10|PA10</item>
+        <item>TELCEL AMIGO SIN LIMITE 20|PA20</item>
+        <item>TELCEL AMIGO SIN LIMITE 30|PA30</item>
+        <item>TELCEL AMIGO SIN LIMITE 50|PA50</item>
+        <item>TELCEL AMIGO SIN LIMITE 80|PA80</item>
+        <item>TELCEL AMIGO SIN LIMITE 100|SL100</item>
+        <item>TELCEL AMIGO SIN LIMITE 150|SL150</item>
+        <item>TELCEL AMIGO SIN LIMITE 200|SL200</item>
+        <item>TELCEL AMIGO SIN LIMITE 300|SL300</item>
+        <item>TELCEL AMIGO SIN LIMITE 500|SL500</item>
+        <item>TELCEL INTERNET 10|ILIM10</item>
+        <item>TELCEL INTERNET 15|ILIM30</item>
+        <item>TELCEL INTERNET 100|INT100</item>
+        <item>TELCEL INTERNET 150|INT150</item>
+        <item>TELCEL INTERNET 20|INT20</item>
+        <item>TELCEL INTERNET 200|INT200</item>
+        <item>TELCEL INTERNET 30|INT30</item>
+        <item>TELCEL INTERNET 300|INT300</item>
+        <item>TELCEL INTERNET 50|INT50</item>
+        <item>TELCEL INTERNET 500|INT500</item>
+        <item>TELCEL TAE 20|00001</item>
+        <item>TELCEL TAE 30|00002</item>
+        <item>TELCEL TAE 50|00003</item>
+        <item>TELCEL TAE 100|00004</item>
+        <item>TELCEL TAE 150|00005</item>
+        <item>TELCEL TAE 200|00006</item>
+        <item>TELCEL TAE 300|00007</item>
+        <item>TELCEL TAE 500|00008</item>
+        <item>TELCEL TAE 10|00114</item>
+        <item>TELCEL TAE 80|00137</item>
+    </string-array>
+    <string-array name="unefon_sku_array">
+        <item>UNEFON 50|00076</item>
+        <item>UNEFON 100|00077</item>
+        <item>UNEFON 150|00078</item>
+        <item>UNEFON 200|00079</item>
+        <item>UNEFON 300|00080</item>
+        <item>UNEFON 500|00081</item>
+        <item>UNEFON 20|00093</item>
+        <item>UNEFON 30|00094</item>
+        <item>UNEFON 10|00112</item>
+        <item>UNEFON 70|00113</item>
+        <item>UNEFON 120|00127</item>
+        <item>UNEFON 15|00165</item>
+    </string-array>
+    <string-array name="virgin_sku_array">
+        <item>VIRGIN MOBILE 20|00060</item>
+        <item>VIRGIN MOBILE 30|00061</item>
+        <item>VIRGIN MOBILE 40|00062</item>
+        <item>VIRGIN MOBILE 50|00063</item>
+        <item>VIRGIN MOBILE 100|00064</item>
+        <item>VIRGIN MOBILE 150|00065</item>
+        <item>VIRGIN MOBILE 200|00066</item>
+        <item>VIRGIN MOBILE 300|00067</item>
+        <item>VIRGIN MOBILE 500|00068</item>
+    </string-array>
+
 </resources>
