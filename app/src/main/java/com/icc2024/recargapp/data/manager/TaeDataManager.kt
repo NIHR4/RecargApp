@@ -7,7 +7,7 @@ import com.icc2024.recargapp.data.remote.api.TaeServiceApi
 import com.icc2024.recargapp.data.remote.client.TaeServiceGenerator
 import rx.Observable
 
-class DataManager(val context: Context) {
+class TaeDataManager(val context: Context) {
 
     fun performRechargeRequest(request : RechargeRequestDto) : Observable<RechargeResponse> {
         return TaeServiceGenerator.createService(TaeServiceApi::class.java, context)

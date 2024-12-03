@@ -1,6 +1,7 @@
 package com.icc2024.recargapp.ui.recharge
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.icc2024.recargapp.R
 import com.icc2024.recargapp.data.dto.RechargeRequestDto
@@ -53,7 +54,8 @@ class RechargeActivity : AppCompatActivity(R.layout.activity_recharge), Recharge
     }
 
     override fun changeToErrorScreen() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Conexion fallida", Toast.LENGTH_SHORT);
+        finish()
     }
 
 }

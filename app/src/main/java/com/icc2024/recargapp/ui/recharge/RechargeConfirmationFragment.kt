@@ -13,6 +13,7 @@ import com.icc2024.recargapp.contract.RechargeConfirmationContract
 import com.icc2024.recargapp.data.dto.RechargeRequestDto
 import com.icc2024.recargapp.data.model.RechargeResponse
 import com.icc2024.recargapp.presenter.RechargeConfirmationPresenter
+import com.icc2024.recargapp.ui.dialog.LoadingDialog
 import com.icc2024.recargapp.ui.recharge.RechargeFragment.Callbacks
 import com.icc2024.recargapp.util.formatPhoneNumber
 
@@ -33,6 +34,7 @@ class RechargeConfirmationFragment : Fragment(), RechargeConfirmationContract.Vi
 
     private var presenter : RechargeConfirmationContract.Presenter? = null
     private var callback : Callbacks? = null
+    private var loadingDialog : LoadingDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,10 +60,11 @@ class RechargeConfirmationFragment : Fragment(), RechargeConfirmationContract.Vi
         var confirmBtn = activity?.findViewById<Button>(R.id.button_confirmar_recarga)
         confirmBtn?.setOnClickListener {
             Log.v("RechargeConfirmationFragment.onViewCreated", "confirm button clicked")
+            loadingDialog?.startLoadingDialog()
             presenter?.performRecharge()
         }
 
-
+        loadingDialog = LoadingDialog(requireActivity())
         presenter?.initializeUi()
     }
 

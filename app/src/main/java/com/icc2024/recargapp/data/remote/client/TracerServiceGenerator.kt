@@ -8,12 +8,12 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-object TaeServiceGenerator {
+object TracerServiceGenerator {
 
 
     private val builder = Retrofit.Builder()
         .addCallAdapterFactory(RxJavaCallAdapterFactory.createAsync())
-        .baseUrl("http://192.168.100.137:8080/")
+        .baseUrl("http://192.168.100.137:5000/")
         .addConverterFactory(
             GsonConverterFactory.create(
                 GsonBuilder()
@@ -42,9 +42,9 @@ object TaeServiceGenerator {
 
                 okHttpClient = OkHttpClient.Builder()
                     .addNetworkInterceptor(logging)
-                    .connectTimeout(10, TimeUnit.SECONDS)
-                    .readTimeout(10, TimeUnit.SECONDS)
-                    .writeTimeout(10, TimeUnit.SECONDS)
+                    .connectTimeout(60, TimeUnit.SECONDS)
+                    .readTimeout(60, TimeUnit.SECONDS)
+                    .writeTimeout(60, TimeUnit.SECONDS)
                     .retryOnConnectionFailure(true)
                     .build()
             }

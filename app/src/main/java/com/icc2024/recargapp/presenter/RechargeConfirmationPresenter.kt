@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.icc2024.recargapp.contract.RechargeConfirmationContract
 import com.icc2024.recargapp.data.dto.RechargeRequestDto
-import com.icc2024.recargapp.data.manager.DataManager
+import com.icc2024.recargapp.data.manager.TaeDataManager
 import com.icc2024.recargapp.data.manager.SkuDataManager
 import com.icc2024.recargapp.data.model.RechargeResponse
 import rx.Subscriber
@@ -17,7 +17,7 @@ class RechargeConfirmationPresenter (
     private val rechargeData : RechargeRequestDto,
 ) : RechargeConfirmationContract.Presenter {
 
-    private val dataManager = DataManager(context)
+    private val dataManager = TaeDataManager(context)
 
     override fun initializeUi() {
         val skuObj = SkuDataManager.instance.getAllSkus(context.resources).find { obj -> obj.sku == rechargeData.skucode }
